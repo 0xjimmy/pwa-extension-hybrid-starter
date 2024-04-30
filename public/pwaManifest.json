@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "permissions": ["sidePanel"],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "background": {
+    "scripts": ["extensionService.js"],
+    "service_worker": "extensionService.js"
+  },
+  "action": {
+    "default_title": "Open Panel",
+    "default_icon": "vite.svg"
+  },
+  "sidebar_action": {
+    "default_title": "My sidebar",
+    "default_panel": "index.html",
+    "default_icon": "vite.svg"
+  }
+}
